@@ -8,6 +8,7 @@
     background-size: cover; /* it will try to fit the element inside the box(the parent element)*/
     background-position: top;
     position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*polygon in which element will be visible*/
 
     &__logo-box {
