@@ -1,0 +1,30 @@
+.header {
+    height: 95vh; /* 95% of view height */
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.8), 
+        rgba($color-primary-dark, 0.8)), 
+        url('../img/hero.jpg');
+    background-size: cover; /* it will try to fit the element inside the box(the parent element)*/
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*polygon in which element will be visible*/
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem; /* this reference for measurement starts from the parent element whose position is relative*/
+        left: 4rem;
+    }
+
+    &__logo{
+        height: 3.5rem;
+    }
+
+    &__txt-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
