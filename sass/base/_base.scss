@@ -9,12 +9,43 @@
 
 /* changing root font-size */
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; //1 rem = 10px
     /* setting the inital font-size as 10px since default is 16px */
+
+    /*
+    just for testing, see mixin
+    @include respond-phone {
+        font-size: 50%;
+    }
+    */
+
+    /*
+    we are removing phone because tab-port and this one, both of them will apply here
+    @include respond(phone) {
+        font-size: 50%; // 1 rem 
+    }
+    */
+
+    @include respond(tab-land) {
+        font-size: 56.25%; //1 rem = 9px
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%; // 1rem = 8px so.. 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12px
+    }
 }
 
 /* doing this in body since it will be inherited */
 body {
     box-sizing: border-box;
     /* box-sizing border box makes the border and padding not to be added in the total width and height */
+    padding: 3rem;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }
