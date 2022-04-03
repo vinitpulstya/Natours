@@ -859,7 +859,8 @@ body {
   left: 0;
   z-index: 1500;
   opacity: 0;
-  width: 0;
+  width: 55%;
+  visibility: hidden;
   transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
 
 .navigation__list {
@@ -896,7 +897,8 @@ body {
 
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
-  width: 100%; }
+  width: 100%;
+  visibility: visible; }
 
 .navigation__icon {
   position: relative;
